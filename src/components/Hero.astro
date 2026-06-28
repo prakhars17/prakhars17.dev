@@ -1,0 +1,76 @@
+---
+import { Image } from "astro:assets";
+import me from "../assets/images/me.jpeg";
+
+const email = "saxena.prakhar17@gmail.com";
+const socials = [
+	{ href: "https://github.com/prakhars17", label: "GitHub ↗" },
+	{ href: "https://linkedin.com/in/prakhars17", label: "LinkedIn ↗" },
+];
+---
+
+<header class="pt-37 pb-24">
+	<div class="mb-10 grid grid-cols-[auto_1fr] items-center gap-7">
+		<div
+			class="size-40 overflow-hidden rounded-full border border-(--border)"
+		>
+			<Image
+				src={me}
+				width={320}
+				alt="Prakhar Saxena"
+				class="size-full object-cover"
+			/>
+		</div>
+		<div class="flex flex-col gap-1.5">
+			<span class="text-[20px] font-medium text-(--ink)">Prakhar</span>
+			<span class="text-[13px] lowercase tracking-widest text-(--muted)"
+				>Software Engineer</span
+			>
+		</div>
+	</div>
+
+	<h1
+		class="mb-5.5 text-pretty text-[clamp(42px,7vw,64px)] font-normal leading-[1.08] tracking-tight text-(--ink)"
+	>
+		I build and own what I ship.
+	</h1>
+
+	<p
+		class="mb-7.5 max-w-[60ch] text-pretty text-[18px] leading-[1.65] text-(--ink-mid)"
+	>
+		Five-plus years building products, not just screens. I take things from
+		a rough idea to something shipped and looked after — the design, the
+		frontend, the API when it needs me, the metric afterward. I'm
+		comfortable across the stack and reach for whatever the problem actually
+		needs.
+	</p>
+
+	<div class="mb-7.5 flex flex-wrap items-center gap-3.5">
+		<a
+			href={`mailto:${email}`}
+			class="inline-flex items-center gap-2 rounded-lg bg-(--accent) px-5 py-3 text-[14px] font-medium text-(--bg) transition duration-250 hover:brightness-92"
+		>
+			Email me
+		</a>
+		<a
+			download
+			href="/Prakhar_Saxena_Resume.pdf"
+			class="inline-flex items-center gap-2 rounded-lg border border-(--btn-border) px-4.5 py-3 text-[14px] font-medium text-(--ink) transition duration-250 hover:border-(--faint) hover:bg-(--card)"
+		>
+			Resume <span class="text-[13px]">↓</span>
+		</a>
+	</div>
+
+	<div class="flex items-center gap-5.5">
+		{
+			socials.map(({ href, label }) => (
+				<a
+					href={href}
+					class="text-[13px] tracking-[0.04em] text-(--muted) transition-colors duration-250 hover:text-(--ink)"
+				>
+					{label}
+				</a>
+			))
+		}
+	</div>
+</header>

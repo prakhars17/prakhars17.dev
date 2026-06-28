@@ -1,15 +1,39 @@
 ---
+import { Font } from "astro:assets";
+import About from "../components/About.astro";
+import Contact from "../components/Contact.astro";
+import Hero from "../components/Hero.astro";
+import Nav from "../components/Nav.astro";
+import Projects from "../components/Projects.astro";
+import Work from "../components/Work.astro";
 import "../styles/global.css";
+
+const title = "Prakhar Saxena - Software Engineer";
+const description =
+	"Prakhar Saxena is a software engineer who builds and owns products end to end.";
 ---
 
-<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>prakhars17.dev</title>
-  </head>
-  <body></body>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<Font cssVariable="--font-syne" preload />
+	</head>
+	<body class="font-syne bg-(--bg) text-(--ink) antialiased">
+		<Nav />
+		<main id="top" class="mx-auto max-w-170 px-6">
+			<Hero />
+			<About />
+			<Work />
+			<Projects />
+			<Contact />
+		</main>
+	</body>
 </html>

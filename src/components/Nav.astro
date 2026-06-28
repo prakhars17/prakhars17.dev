@@ -1,0 +1,35 @@
+---
+const links = [
+	{ href: "#about", label: "About" },
+	{ href: "#work", label: "Work" },
+	{ href: "#projects", label: "Projects" },
+	{ href: "#contact", label: "Contact" },
+];
+---
+
+<nav
+	class="fixed inset-x-0 top-0 z-50 border-b border-(--border) bg-[color-mix(in_srgb,var(--bg)_78%,transparent)] backdrop-blur-[6px]"
+>
+	<div
+		class="mx-auto grid h-15 max-w-170 grid-cols-[auto_1fr] items-center px-6"
+	>
+		<a
+			href="#top"
+			class="font-medium text-[16px] text-(--ink) whitespace-nowrap"
+		>
+			Prakhar
+		</a>
+		<div class="flex items-center justify-self-end gap-6.5">
+			{
+				links.map(({ href, label }) => (
+					<a
+						href={href}
+						class="text-[13px] font-medium lowercase tracking-widest text-(--muted) transition-colors duration-250 hover:text-(--ink)"
+					>
+						{label}
+					</a>
+				))
+			}
+		</div>
+	</div>
+</nav>

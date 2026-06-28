@@ -1,1 +1,43 @@
 @import "tailwindcss";
+
+@theme {
+	--font-syne: "Syne", system-ui, sans-serif;
+}
+
+:root {
+	--accent: #3a5a40;
+	--bg: #f5f4ef;
+	--border: #e6e3da;
+	--card: #fbfaf6;
+	--hairline: #ece9e0;
+
+	/* text tokens */
+	--ink: #1c1b17;
+	--ink-soft: #3f3e37;
+	--ink-mid: #54534b;
+	--muted: #6c6a61;
+	--faint: #9a988d;
+	--btn-border: #d9d5ca;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+/* disable smooth scrolling for devices with reduced motion */
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+::selection {
+	background: var(--accent);
+	color: var(--bg);
+}
+
+:focus-visible {
+	outline: 2px solid var(--accent);
+	outline-offset: 3px;
+	border-radius: 2px;
+}
