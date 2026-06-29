@@ -1,0 +1,38 @@
+---
+import { config } from "../data/config";
+
+const footerLinks = [
+	{ href: config.socials.github, label: "GitHub ↗" },
+	{ href: config.socials.linkedin, label: "LinkedIn ↗" },
+];
+---
+
+<section id="contact" class="scroll-mt-21 border-t border-(--border) pt-15">
+	<div class="mb-9 text-[14px] lowercase tracking-widest text-(--muted)">
+		<span class="text-(--accent)">04</span> &nbsp;— &nbsp;Contact
+	</div>
+
+	<a
+		href={`mailto:${config.email}`}
+		class="inline-block text-[clamp(26px,4.5vw,36px)] font-normal tracking-[-0.02em] text-(--ink) transition-colors duration-250 hover:text-(--accent)"
+	>
+		{config.email}
+	</a>
+
+	<footer
+		class="mt-12 grid grid-cols-[1fr_auto] items-center gap-4 border-t border-(--hairline) pt-7.5 pb-14"
+	>
+		<div class="flex items-center gap-5.5">
+			{
+				footerLinks.map(({ href, label }) => (
+					<a
+						href={href}
+						class="text-[13px] tracking-[0.04em] text-(--muted) transition-colors duration-250 hover:text-(--ink)"
+					>
+						{label}
+					</a>
+				))
+			}
+		</div>
+	</footer>
+</section>
