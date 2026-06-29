@@ -1,0 +1,50 @@
+---
+const PROJECTS = [
+	{
+		title: "Helios",
+		blurb:
+			"A dashboard rebuild for analysts who were leaving before the charts finished loading.",
+		tags: ["React", "Streaming SSR", "Performance"],
+		href: "#",
+	},
+];
+---
+
+<section id="projects" class="section-wrapper">
+	<div class="section-label">
+		<span class="text-(--accent)">03</span> &nbsp;— &nbsp;Selected projects
+	</div>
+
+	<div class="grid gap-5">
+		{
+			PROJECTS.map((project) => (
+				<article class="rounded-xl border border-(--border) bg-(--card) p-6.5">
+					<div class="mb-3 title-row">
+						<h3 class="text-[23px] font-medium tracking-[-0.015em] text-(--ink)">
+							{project.title}
+						</h3>
+						<span class="whitespace-nowrap text-[12px] lowercase text-(--faint)">
+							Case study
+						</span>
+					</div>
+					<p class="mb-4.5 max-w-[58ch] text-pretty text-[16px] leading-[1.6] text-(--ink-soft)">
+						{project.blurb}
+					</p>
+					<div class="mb-4.5 flex flex-wrap gap-1.75">
+						{project.tags.map((tag) => (
+							<span class="rounded-[5px] border border-(--border) px-2.25 py-0.75 text-[11px] text-(--muted)">
+								{tag}
+							</span>
+						))}
+					</div>
+					<a
+						href={project.href}
+						class="inline-flex items-center gap-1.5 text-[12px] tracking-[0.04em] text-(--accent) transition-opacity duration-200 hover:opacity-65"
+					>
+						View case study ↗
+					</a>
+				</article>
+			))
+		}
+	</div>
+</section>

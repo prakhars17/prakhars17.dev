@@ -7,8 +7,8 @@ const footerLinks = [
 ];
 ---
 
-<section id="contact" class="scroll-mt-21 border-t border-(--border) pt-15">
-	<div class="mb-9 text-[14px] lowercase tracking-widest text-(--muted)">
+<section id="contact" class="section-wrapper !pb-0">
+	<div class="section-label">
 		<span class="text-(--accent)">04</span> &nbsp;— &nbsp;Contact
 	</div>
 
@@ -27,7 +27,7 @@ const footerLinks = [
 				footerLinks.map(({ href, label }) => (
 					<a
 						href={href}
-						class="text-[13px] tracking-[0.04em] text-(--muted) transition-colors duration-250 hover:text-(--ink)"
+						class="link-soft"
 					>
 						{label}
 					</a>

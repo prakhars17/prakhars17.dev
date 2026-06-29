@@ -18,6 +18,7 @@
 	--muted: #6c6a61;
 	--faint: #9a988d;
 	--btn-border: #d9d5ca;
+	--nav-bg: color-mix(in srgb, var(--bg) 78%, transparent);
 }
 
 html {
@@ -40,4 +41,44 @@ html {
 	outline: 2px solid var(--accent);
 	outline-offset: 3px;
 	border-radius: 2px;
+}
+
+@utility site-container {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 42.5rem;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+
+@utility section-wrapper {
+	scroll-margin-top: 5.25rem;
+	border-top: 1px solid var(--border);
+	padding-top: 3.75rem;
+	padding-bottom: 3.75rem;
+}
+
+@utility section-label {
+	margin-bottom: 2.5rem;
+	font-size: 14px;
+	text-transform: lowercase;
+	letter-spacing: 0.1em;
+	color: var(--muted);
+}
+
+@utility link-soft {
+	font-size: 13px;
+	letter-spacing: 0.04em;
+	color: var(--muted);
+	transition: color 250ms;
+	&:hover {
+		color: var(--ink);
+	}
+}
+
+@utility title-row {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	align-items: baseline;
+	gap: 1rem;
 }

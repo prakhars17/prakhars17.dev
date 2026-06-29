@@ -12,15 +12,15 @@ const WORK = [
 ];
 ---
 
-<section id="work" class="scroll-mt-21 border-t border-(--border) py-15">
-	<div class="mb-10 text-[14px] lowercase tracking-widest text-(--muted)">
+<section id="work" class="section-wrapper">
+	<div class="section-label">
 		<span class="text-(--accent)">02</span> &nbsp;— &nbsp;Work
 	</div>
 
 	{
 		WORK.map((role) => (
 			<div class="border-t border-(--hairline) py-6">
-				<div class="mb-1.5 grid grid-cols-[1fr_auto] items-baseline gap-4">
+				<div class="mb-1.5 title-row">
 					<h3 class="text-[21px] font-medium tracking-[-0.01em] text-(--ink)">
 						{role.title}
 					</h3>
