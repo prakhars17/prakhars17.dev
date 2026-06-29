@@ -5,6 +5,7 @@ export const config = {
 	},
 	role: "Software Engineer",
 	email: "hey@prakhars17.dev",
+	resume: "Prakhar_Saxena_Resume.pdf",
 	socials: {
 		github: "https://github.com/prakhars17",
 		linkedin: "https://linkedin.com/in/prakhars17",

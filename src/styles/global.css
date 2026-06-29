@@ -71,6 +71,9 @@ html {
 	letter-spacing: 0.04em;
 	color: var(--muted);
 	transition: color 250ms;
+	text-decoration: underline;
+	text-decoration-style: dashed;
+	text-underline-offset: 4px;
 	&:hover {
 		color: var(--ink);
 	}

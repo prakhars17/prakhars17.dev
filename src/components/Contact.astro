@@ -4,10 +4,11 @@ import { config } from "../data/config";
 const footerLinks = [
 	{ href: config.socials.github, label: "GitHub ↗" },
 	{ href: config.socials.linkedin, label: "LinkedIn ↗" },
+	{ href: `/${config.resume}`, label: "Resume ↗" },
 ];
 ---
 
-<section id="contact" class="section-wrapper !pb-0">
+<section id="contact" class="section-wrapper pb-0!">
 	<div class="section-label">
 		<span class="text-(--accent)">04</span> &nbsp;— &nbsp;Contact
 	</div>
@@ -27,6 +28,8 @@ const footerLinks = [
 				footerLinks.map(({ href, label }) => (
 					<a
 						href={href}
+						target="_blank"
+						rel="noopener noreferrer"
 						class="link-soft"
 					>
 						{label}

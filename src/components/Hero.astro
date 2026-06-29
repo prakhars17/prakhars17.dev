@@ -39,7 +39,7 @@ const socialLinks = [
 	</h1>
 
 	<p
-		class="mb-7.5 max-w-[60ch] text-pretty text-[18px] leading-[1.65] text-(--ink-mid)"
+		class="mb-7.5 max-w-[62ch] text-pretty text-[18px] leading-[1.65] text-(--ink-mid)"
 	>
 		Five-plus years building products, not just screens. I take things from
 		a rough idea to something shipped and looked after — the design, the
@@ -56,11 +56,12 @@ const socialLinks = [
 			Email me
 		</a>
 		<a
-			download
-			href="/Prakhar_Saxena_Resume.pdf"
+			href={`/${config.resume}`}
+			target="_blank"
+			rel="noopener noreferrer"
 			class="inline-flex items-center gap-2 rounded-lg border border-(--btn-border) px-4.5 py-3 text-[14px] font-medium text-(--ink) transition duration-250 hover:border-(--faint) hover:bg-(--card)"
 		>
-			Resume <span class="text-[13px]">↓</span>
+			Resume <span class="text-[13px]">↗</span>
 		</a>
 	</div>
 
@@ -69,6 +70,8 @@ const socialLinks = [
 			socialLinks.map(({ href, label }) => (
 				<a
 					href={href}
+					target="_blank"
+					rel="noopener noreferrer"
 					class="link-soft"
 				>
 					{label}
