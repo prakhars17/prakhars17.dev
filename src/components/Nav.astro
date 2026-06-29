@@ -1,4 +1,6 @@
 ---
+import { config } from "../data/config";
+
 const links = [
 	{ href: "#about", label: "About" },
 	{ href: "#work", label: "Work" },
@@ -17,7 +19,7 @@ const links = [
 			href="#top"
 			class="font-medium text-[16px] text-(--ink) whitespace-nowrap"
 		>
-			Prakhar
+			{config.name.first}
 		</a>
 		<div class="flex items-center justify-self-end gap-6.5">
 			{
