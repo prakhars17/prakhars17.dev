@@ -10,10 +10,10 @@ const PROJECTS = [
 ];
 ---
 
-<section id="projects" class="section-wrapper">
-	<div class="section-label">
+<section id="projects" class="section-wrapper" aria-labelledby="projects-label">
+	<h2 id="projects-label" class="section-label">
 		<span class="text-(--accent)">03</span> &nbsp;— &nbsp;Selected projects
-	</div>
+	</h2>
 
 	<div class="grid gap-5">
 		{
@@ -38,7 +38,7 @@ const PROJECTS = [
 						))}
 					</div>
 					<a href={project.href} class="link-soft text-[12px]">
-						View case study →
+						View case study<span class="ml-1 inline-block no-underline" aria-hidden="true">→</span>
 					</a>
 				</article>
 			))

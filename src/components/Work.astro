@@ -4,6 +4,7 @@ const WORK = [
 		title: "Senior Software Engineer",
 		period: "Dec 2024 — Now",
 		company: "Guardian Life",
+		url: "https://www.guardianlife.com",
 		before:
 			"Reworked the main dashboard's render path. Median load dropped from ",
 		metric: "2.4s to 0.9s",
@@ -12,10 +13,10 @@ const WORK = [
 ];
 ---
 
-<section id="work" class="section-wrapper">
-	<div class="section-label">
+<section id="work" class="section-wrapper" aria-labelledby="work-label">
+	<h2 id="work-label" class="section-label">
 		<span class="text-(--accent)">02</span> &nbsp;— &nbsp;Work
-	</div>
+	</h2>
 
 	{
 		WORK.map((role) => (
@@ -29,7 +30,15 @@ const WORK = [
 					</span>
 				</div>
 				<div class="mb-3.5 text-[15px] text-(--muted)">
-					{role.company}
+					<a
+						href={role.url}
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label={`${role.company} opens in a new tab`}
+						class="link-soft text-[15px]"
+					>
+						{role.company}<span class="ml-1 inline-block no-underline" aria-hidden="true">↗</span>
+					</a>
 				</div>
 				<p class="max-w-[62ch] text-pretty text-[16px] leading-[1.6] text-(--ink-soft)">
 					{role.before}

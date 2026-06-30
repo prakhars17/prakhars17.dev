@@ -16,7 +16,7 @@
 	--ink-soft: #3f3e37;
 	--ink-mid: #54534b;
 	--muted: #6c6a61;
-	--faint: #9a988d;
+	--faint: #6f6d63;
 	--btn-border: #d9d5ca;
 	--nav-bg: color-mix(in srgb, var(--bg) 78%, transparent);
 }
