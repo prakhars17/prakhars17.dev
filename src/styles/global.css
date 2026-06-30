@@ -85,3 +85,14 @@ html {
 	align-items: baseline;
 	gap: 1rem;
 }
+
+@utility title-link {
+	font-size: 23px;
+	letter-spacing: 0.04em;
+	font-weight: 500;
+	color: var(--ink);
+	transition: color 250ms;
+	&:hover {
+		color: var(--accent);
+	}
+}

@@ -1,10 +1,9 @@
 ---
 const WORK = [
 	{
-		title: "Senior Software Engineer",
-		period: "Dec 2024 — Now",
 		company: "Guardian Life",
-		url: "https://www.guardianlife.com",
+		period: "Dec 2024 — Now",
+		jobTitle: "Senior Software Engineer",
 		before:
 			"Reworked the main dashboard's render path. Median load dropped from ",
 		metric: "2.4s to 0.9s",
@@ -23,22 +22,14 @@ const WORK = [
 			<div class="border-t border-(--hairline) py-6">
 				<div class="mb-1.5 title-row">
 					<h3 class="text-[21px] font-medium tracking-[-0.01em] text-(--ink)">
-						{role.title}
+						{role.company}
 					</h3>
 					<span class="whitespace-nowrap text-[12px] text-(--faint)">
 						{role.period}
 					</span>
 				</div>
 				<div class="mb-3.5 text-[15px] text-(--muted)">
-					<a
-						href={role.url}
-						target="_blank"
-						rel="noopener noreferrer"
-						aria-label={`${role.company} opens in a new tab`}
-						class="link-soft text-[15px]"
-					>
-						{role.company}<span class="ml-1 inline-block no-underline" aria-hidden="true">↗</span>
-					</a>
+					{role.jobTitle}
 				</div>
 				<p class="max-w-[62ch] text-pretty text-[16px] leading-[1.6] text-(--ink-soft)">
 					{role.before}
