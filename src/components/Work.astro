@@ -1,13 +1,13 @@
 ---
+import { config } from "../data/config";
+
 const WORK = [
 	{
 		company: "Guardian Life",
 		period: "Dec 2024 — Now",
 		jobTitle: "Senior Software Engineer",
-		before:
-			"Reworked the main dashboard's render path. Median load dropped from ",
-		metric: "2.4s to 0.9s",
-		after: " and weekly active use rose 18%.",
+		summary:
+			"Rebuilt the dental cost estimator in Next.js 15 so members can compare in-network and out-of-network costs before booking. We shipped it behind LaunchDarkly flags to all 4M+ eligible members once it cleared WCAG 2.1 AA, pushing task completion past 75%. I also worked across the member dashboard revamp serving 5M+ members.",
 	},
 ];
 ---
@@ -18,8 +18,13 @@ const WORK = [
 	</h2>
 
 	{
-		WORK.map((role) => (
-			<div class="border-t border-(--hairline) py-6">
+		WORK.map((role, index) => (
+			<div
+				class:list={[
+					"pb-6",
+					{ "border-t border-(--hairline) pt-6": index > 0 },
+				]}
+			>
 				<div class="mb-1.5 title-row">
 					<h3 class="text-[21px] font-medium tracking-[-0.01em] text-(--ink)">
 						{role.company}
@@ -32,13 +37,30 @@ const WORK = [
 					{role.jobTitle}
 				</div>
 				<p class="max-w-[62ch] text-pretty text-[16px] leading-[1.6] text-(--ink-soft)">
-					{role.before}
-					<span class="font-medium text-(--accent)">
-						{role.metric}
-					</span>
-					{role.after}
+					{role.summary}
 				</p>
 			</div>
 		))
 	}
+
+	<p
+		class="max-w-[62ch] text-pretty border-t border-(--hairline) pt-6 text-[16px] leading-[1.6] text-(--ink-soft)"
+	>
+		Before Guardian, I built products for startups across travel and
+		manufacturing.
+		<br />
+		More on{" "}
+		<a
+			target="_blank"
+			class="link-soft"
+			rel="noopener noreferrer"
+			href={config.socials.linkedin}
+			aria-label="LinkedIn opens in a new tab"
+		>
+			LinkedIn
+			<span class="ml-1 inline-block no-underline" aria-hidden="true">
+				↗
+			</span>
+		</a>
+	</p>
 </section>
